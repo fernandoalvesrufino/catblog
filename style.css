@@ -20,7 +20,9 @@ html, body, button, input {
 }
 
 #app {
-  max-width: 43rem;
+  width: min(43rem, 100%);
+
+  /* max-width: 43rem; */
   margin: 0 auto;
   height: 100vh;
   
@@ -33,7 +35,6 @@ html, body, button, input {
 
 .container {
   padding: 1.6rem 2.8rem;
-  /* width: min(43rem, 100%); */
 }
 
 header {
@@ -177,7 +178,6 @@ h2 {
   font-size: 1.8rem;
   font-style: normal;
   font-weight: 700;
-  /* line-height: 2.8rem; */
 }
 
 .others p {
@@ -200,4 +200,30 @@ footer p{
   line-height: normal;
 
   color: var(--color-text);
+}
+
+header img, header form, header .avatar{
+  --startY: -100%;
+  animation: move .5s;
+}
+
+footer p{
+  --startY: 100%;
+  animation: move .5s;
+}
+
+main .capa {
+  animation: appear 1s;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(var(--startY));
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0%;
+  }
 }
