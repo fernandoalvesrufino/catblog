@@ -125,6 +125,7 @@ h1 {
 
 .buttons button:hover {
   transform: scale(1.1);
+  cursor: pointer;
 }
 
 .text {
@@ -166,6 +167,13 @@ h2 {
   object-fit: cover;
 
   display: block;
+
+  transition: all .4s ease;
+}
+
+.others img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .info {
@@ -225,5 +233,37 @@ main .capa {
 @keyframes appear {
   0% {
     opacity: 0%;
+  }
+}
+
+@media (min-width: 1120px) {
+  #app {
+    width: 100%;
+  }
+  
+  main {
+    display: grid;
+    
+    grid-template-areas: 
+    "photo photo aside"
+    "conteudo conteudo aside";
+
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+
+    column-gap: 3.4rem;
+  }
+
+  main div:nth-child(1) {
+    grid-area: photo;
+  }
+  
+  main div:nth-child(2) {
+    /* grid-area: conteudo;  */
+  }
+  
+  main div:nth-child(3) {
+    grid-area: aside;
   }
 }
