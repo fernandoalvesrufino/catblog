@@ -10,9 +10,14 @@
 :root {
   font-size: 62.5%;
 
-  --bg-color-theme: hsl(195, 91%, 25%);
+  --hue-text: 240;
+  --hue: 195;
+
+  --bg-color-theme: hsl(var(--hue), 91%, 25%);
   --color-text: hsl(0, 0%, 100%);
   --color-bg-input: hsla(0, 0%, 100%, 0.200);
+  --second-color-text: hsl(var(--hue-text), 5%, 7%);
+  --topic-color-text: hsl(var(--hue-text), 6%, 13%);
 }
 
 html, body, button, input {
