@@ -241,18 +241,24 @@ main .capa {
     width: 100%;
   }
   
+  header.container {
+    padding: 1.6rem 14rem;
+  }
+  
   main {
     display: grid;
     
     grid-template-areas: 
     "photo photo aside"
+    "conteudo conteudo aside"
     "conteudo conteudo aside";
 
     height: 100%;
-    width: 90%;
     margin: 0 auto;
 
     column-gap: 3.4rem;
+
+    padding: 4.4rem 11rem;
   }
 
   main div:nth-child(1) {
@@ -260,10 +266,31 @@ main .capa {
   }
   
   main div:nth-child(2) {
-    /* grid-area: conteudo;  */
+    grid-area: conteudo; 
   }
   
   main div:nth-child(3) {
     grid-area: aside;
+    /* overflow-y: scroll; */
+    width: 38rem;
+
+    padding: 0;
+
+  }
+
+  .topic {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 3.2rem 0;
+  }
+
+  .capa {
+  padding: 1.6rem 2.8rem;
+  }
+  
+  .topic h1, .buttons {
+    padding: 0;
   }
 }
